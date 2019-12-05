@@ -1,0 +1,25 @@
+$black: #212529;
+$gray: #404040;
+$gray-light: #808080;
+$blue: #037EBC;
+$blue-light: #3AAFE9;
+
+$main-font: 'Pragmatica';
+
+/*===========*/
+
+@import 'reset';
+
+body {
+	font: 400 16px $main-font, 'Open Sans', sans-serif;
+	color: $black;
+	background: #fff;
+}
+
+/*
+index.html
+======================================================*/
+
+
+
+@import 'media';
