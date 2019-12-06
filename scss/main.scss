@@ -7,7 +7,8 @@ $white: #FBFBFB;
 
 $main-font: 'Pragmatica';
 
-%transition-2s { transition: color .2s ease-in-out; } 
+%transition-2s { transition: box-shadow .2s, transform .2s, border .2s, background .2s, opacity .2s, color .2s ease-in-out; } 
+%transition-6s { transition: box-shadow .6s, transform .6s, border .6s, background .6s, opacity .6s, color .6s ease-in-out; } 
 
 /*===========*/
 
@@ -24,12 +25,14 @@ index.html
 ======================*/
 
 .header {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	margin: 0 auto;
 	background: $white;
+	z-index: 999;
+	box-shadow: 0 1px 15px 1px rgba(0,0,0,.1);
 
 	&__nav {
 		min-height: 44px;
@@ -41,6 +44,10 @@ index.html
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	&__logo {
+		width: 100px;
+	}
 }
 
 .menu {
@@ -61,11 +68,15 @@ index.html
 
 	&__nav-link {
 		display: block;
-		font-size: 18px;
-		font-weight: 600;
+		font-size: 19px;
+		font-weight: 500;
 		color: $gray;
 		text-transform: uppercase;
 		@extend %transition-2s;
+
+		&:hover {
+			color: $blue;
+		}
 	}
 
 	&__lang-item {
@@ -76,6 +87,142 @@ index.html
 .main-content {
 	margin-top: 44px;
 }
+
+/*
+mytona-slider
+======================*/
+
+.header-slider {
+
+	&__slider-menu {
+		display: flex;
+		justify-content: space-between;
+		max-height: 158px;
+		overflow: hidden;
+		background: #fff;
+	}
+
+	&__item {
+		cursor: pointer;
+		opacity: 0.5;
+		@extend %transition-2s;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&_active {
+			opacity: 1;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.mytona-slide {
+	position: relative;
+	max-height: 792px;
+	overflow: hidden;
+
+	&__link-img {
+		display: block;
+		cursor: pointer;
+	}
+
+	&__link-brand {
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		width: 100%;
+		@extend %transition-6s;
+
+		img {
+			width: 26%;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 99;
+		background: linear-gradient(0deg, rgba(23, 97, 135, 0.9) 0%, rgba(15, 15, 15, 0) 100%);
+		opacity: 0;
+		@extend %transition-6s;
+	}
+
+	&__download-buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__btn {
+		display: block;
+		height: 45px;
+		margin: 0 10px 10px;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	&__comments-block {
+		color: $white;
+		padding: 20px 0 30px;
+	}
+
+	&__comment {
+		position: relative;
+		padding-left: 25px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 6px;
+			left: 0;
+			background: url(../images/header-slider/quote.png) no-repeat center;
+			width: 14px;
+			height: 10px;
+		}
+	}
+
+	&__comment-text {
+		line-height: 25px;
+		max-height: 100px;
+		overflow: hidden;
+	}
+
+	&__comment-autor {
+		line-height: 25px;
+		font-weight: 600;
+		max-height: 25px;
+		overflow: hidden;
+	}
+
+	&:hover {
+		
+		.mytona-slide {
+			
+			&__link-brand {
+				transform: scale(0.85) translateY(-230px);
+			}
+
+			&__content {
+				opacity: 1;
+			}
+		}
+	}
+}
+
 
 
 @import 'media';
