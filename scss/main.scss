@@ -3,8 +3,11 @@ $gray: #404040;
 $gray-light: #808080;
 $blue: #037EBC;
 $blue-light: #3AAFE9;
+$white: #FBFBFB;
 
 $main-font: 'Pragmatica';
+
+%transition-2s { transition: color .2s ease-in-out; } 
 
 /*===========*/
 
@@ -20,6 +23,59 @@ body {
 index.html
 ======================*/
 
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0 auto;
+	background: $white;
+
+	&__nav {
+		min-height: 44px;
+		padding: 0 15px;
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+
+	&__nav-item,
+	&__lang-item {
+		margin: 0 12px;		
+
+		&_active {
+			
+			a {
+				color: $blue;
+			}
+		}
+	}
+
+	&__nav-link {
+		display: block;
+		font-size: 18px;
+		font-weight: 600;
+		color: $gray;
+		text-transform: uppercase;
+		@extend %transition-2s;
+	}
+
+	&__lang-item {
+		margin: 0;
+	}
+}
+
+.main-content {
+	margin-top: 44px;
+}
 
 
 @import 'media';

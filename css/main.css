@@ -1,3 +1,6 @@
+.menu__nav-link {
+  transition: color .2s ease-in-out; }
+
 /*===========*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -91,5 +94,39 @@ body {
 /*
 index.html
 ======================*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  background: #FBFBFB; }
+  .header__nav {
+    min-height: 44px;
+    padding: 0 15px; }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.menu {
+  display: flex;
+  justify-content: center; }
+  .menu__nav-item, .menu__lang-item {
+    margin: 0 12px; }
+    .menu__nav-item_active a, .menu__lang-item_active a {
+      color: #037EBC; }
+  .menu__nav-link {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #404040;
+    text-transform: uppercase; }
+  .menu__lang-item {
+    margin: 0; }
+
+.main-content {
+  margin-top: 44px; }
 
 /*# sourceMappingURL=main.css.map */
