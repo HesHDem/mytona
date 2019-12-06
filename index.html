@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <title>MYTONA</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="fonts/pragmatica/stylesheet.css">
+    <link rel="stylesheet" href="css/font-awesome-all.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
     <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
-	<header class="main-header">
+	<header class="header">
 		<div class="container">
-			<nav class="main-header__nav nav">
+			<nav class="header__nav nav">
 				<a href="index.html" class="nav__logo"><img src="images/logo/logo.svg" alt=""></a>
 				<ul class="nav__menu menu">
 					<li class="menu__nav-item menu__nav-item_active"><a href="#">Главная</a></li>
@@ -37,19 +36,64 @@
 		<div class="mytona-slider">
 			<div class="container-fluid">
 				<div class="mytona-slider__slider">
-					<div class="mytona-slider__slide"></div>
-					<div class="mytona-slider__slide"></div>
-					<div class="mytona-slider__slide"></div>
-					<div class="mytona-slider__slide"></div>
-					<div class="mytona-slider__slide"></div>
+					<div class="mytona-slider__slide slide">
+						<div class="slide__img"><img src="" alt=""></div>
+						<div class="slide__content">
+							<div class="slide__brand"><img src="images/mytona-slider/01.png" alt=""></div>
+							<div class="slide__download-buttons">
+								<a href="#" class="slide__btn"><img src="images/mytona-slider/apple-btn.svg" alt=""></a>
+								<a href="#" class="slide__btn"><img src="images/mytona-slider/googleplay-btn.svg" alt=""></a>
+								<a href="#" class="slide__btn"><img src="images/mytona-slider/microsoft-btn.svg" alt=""></a>
+							</div>
+							<div class="slide__comments-block">
+								<div class="slide__comment">
+									<div class="slide__comment-text">Игра супер! ⭐️ <!-- <i class="fas fa-star"></i> --> Это лучшая игра в своей категории. Классный сюжет, шикарный гардероб, прически, разные рестораны и главное, топы и соревнования</div>
+									<div class="slide__comment-autor">Zarremma</div>
+								</div>
+								<div class="slide__comment">
+									<div class="slide__comment-text">Здравствуйте, хочу сказать огромное спасибо за последние обновление, это просто супер! Теперь вообще из игры отлучаться не хочется :)</div>
+									<div class="slide__comment-autor">	</div>
+								</div>
+								<div class="slide__comment">
+									<div class="slide__comment-text">I love your game It makes me very happy. It is a great time consumer. PS- Make more games like this Xoxo.</div>
+									<div class="slide__comment-autor">Zarremma</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mytona-slider__slide slide">
+						<div class="slide__img"><img src="" alt=""></div>
+						<div class="slide__content">
+							<div class="slide__brand"><img src="images/mytona-slider/01.png" alt=""></div>
+							<div class="slide__download-buttons">
+								<a href="#" class="slide__btn"><img src="images/mytona-slider/apple-btn.svg" alt=""></a>
+								<a href="#" class="slide__btn"><img src="images/mytona-slider/googleplay-btn.svg" alt=""></a>
+								<a href="#" class="slide__btn"><img src="images/mytona-slider/microsoft-btn.svg" alt=""></a>
+							</div>
+							<div class="slide__comments-block">
+								<div class="slide__comment">
+									<div class="slide__comment-text">Игра супер! ⭐️ <!-- <i class="fas fa-star"></i> --> Это лучшая игра в своей категории. Классный сюжет, шикарный гардероб, прически, разные рестораны и главное, топы и соревнования</div>
+									<div class="slide__comment-autor">Zarremma</div>
+								</div>
+								<div class="slide__comment">
+									<div class="slide__comment-text">Здравствуйте, хочу сказать огромное спасибо за последние обновление, это просто супер! Теперь вообще из игры отлучаться не хочется :)</div>
+									<div class="slide__comment-autor">	</div>
+								</div>
+								<div class="slide__comment">
+									<div class="slide__comment-text">I love your game It makes me very happy. It is a great time consumer. PS- Make more games like this Xoxo.</div>
+									<div class="slide__comment-autor">Zarremma</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="mytona-slider__slider-menu">
+				<ul class="mytona-slider__slider-menu">
 					<div class="mytona-slider__item mytona-slider__item_active"></div>
 					<div class="mytona-slider__item"></div>
 					<div class="mytona-slider__item"></div>
 					<div class="mytona-slider__item"></div>
 					<div class="mytona-slider__item"></div>
-				</div>
+				</ul>
 			</div>
 		</div>				
 		<section class="mytona-category">
@@ -147,9 +191,9 @@
 			</div>
 		</section>
 	</main>
-	<footer class="main-footer">
+	<footer class="footer">
 		<div class="container">
-			<div class="main-footer__nav nav">
+			<div class="footer__nav nav">
 				<a href="index.html" class="nav__logo nav__logo_big"><img src="images/logo/logo.svg" alt=""></a>
 				<ul class="nav__menu menu-social">
 				 	<li class="menu-social__nav-item menu-social__nav-item_active"><a target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
@@ -159,38 +203,32 @@
 				 	<li class="menu-social__nav-item"><a target="_blank" href="#"><i class="fab fa-vk"></i></a></li>
 				 </ul> 
 			</div>
-			<div class="row">
-				<div class="col-6">
-					<div class="main-footer__links">
-						<div class="main-footer__title-links">Сайты игр</div>
-						<ul class="main-footer__links-list">
-							<li><a href="#">Seekers Notes: Hidden Mystery</a></li>
-							<li><a href="#">Cooking Diary: Tasty Hills</a></li>
-						</ul>
-					</div>
+			<div class="footer__menu-links row">
+				<div class="footer__links col-6">
+					<div class="footer__title-links">Сайты игр</div>
+					<ul class="footer__links-list">
+						<li><a href="#">Seekers Notes: Hidden Mystery</a></li>
+						<li><a href="#">Cooking Diary: Tasty Hills</a></li>
+					</ul>
 				</div>
-				<div class="col-3">
-					<div class="main-footer__links">
-						<div class="main-footer__title-links">Контакты</div>
-						<ul class="main-footer__links-list">
-							<li><a href="#">info@mytona.com</a></li>
-							<li><a href="#">support@mytona.com</a></li>
-						</ul>
-					</div>
+				<div class="footer__links col-3">
+					<div class="footer__title-links">Контакты</div>
+					<ul class="footer__links-list">
+						<li><a href="#">info@mytona.com</a></li>
+						<li><a href="#">support@mytona.com</a></li>
+					</ul>
 				</div>
-				<div class="col-3">
-					<div class="main-footer__links">
-						<ul class="main-footer__links-list">
-							<li><a href="#">Политика конфиденциальности</a></li>
-							<li><a href="#">Условия использования</a></li>
-							<li><a href="#">Политика использования файлов cookie</a></li>
-							<li><a href="#">Пресс-кит</a></li>
-							<li><a href="#">Оценка условий труда</a></li>
-						</ul>
-					</div>
+				<div class="footer__links col-3">
+					<ul class="footer__links-list">
+						<li><a href="#">Политика конфиденциальности</a></li>
+						<li><a href="#">Условия использования</a></li>
+						<li><a href="#">Политика использования файлов cookie</a></li>
+						<li><a href="#">Пресс-кит</a></li>
+						<li><a href="#">Оценка условий труда</a></li>
+					</ul>
 				</div>
 			</div>
-			<div class="main-footer__copyright">© 2018-2019 MyTona. All rights reserved</div>
+			<div class="footer__copyright">© 2018-2019 MyTona. All rights reserved</div>
 		</div>
 	</footer>
 
