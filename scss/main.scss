@@ -358,7 +358,7 @@ mytona-category
 	}
 	
 	&:hover {
-		background: #fff;
+		background: $white;
 		@extend %shadow-block-1;
 	}
 
@@ -401,6 +401,90 @@ mytona-category
 		max-height: 18px;
 		color: $gray-light;
 		@extend %overflow-hidden; 
+	}
+}
+
+/*
+footer
+======================*/
+
+.footer {
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+	&__nav {
+		margin-bottom: 60px;
+	}
+
+	&__logo {
+		width: 120px;
+	}
+
+	&__menu-links {
+		margin-bottom: 10px;
+	}
+
+	&__links-title {
+		font-size: 12px;
+		line-height: 18px;
+		color: $gray-light;
+	}
+
+	&__links-list {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	&__copyright {
+		font-size: 12px;
+		line-height: 18px;
+		color: $gray-light;
+	}
+
+	&__link {
+		@extend %transition-2s;
+
+		&:hover {
+			color: $blue;
+		}
+
+		&_opacity {
+			opacity: .2;
+
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+}
+
+.menu-social {
+	display: flex;
+	justify-content: flex-end;
+
+	&__nav-item {
+		margin-left: 5px;
+	}
+
+	&__nav-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 30px;
+		font-size: 20px;
+		color: $white;
+		background: $gray;
+		transform: skew(-30deg);
+		@extend %transition-2s;
+
+		i {
+			transform: skew(30deg);
+		}
+
+		&:hover {
+			background: $gray-light;
+		}
 	}
 }
 
