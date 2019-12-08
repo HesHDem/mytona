@@ -56,6 +56,8 @@ h2.title {
 	}
 }
 
+
+
 /*
 index.html
 ======================*/
@@ -134,13 +136,48 @@ header-slider
 ======================*/
 
 .header-slider {
+	position: relative;
+
+	.slide-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		width: 13%;
+		height: 100%;
+		font-size: 30px;
+		color: $white;
+		text-shadow: 0 4px 6px $black;
+		opacity: .5;
+		z-index: 99;
+		@extend %transition-2s;
+
+		&:hover {
+			opacity: 1;
+		}
+		
+		&_left {
+			left: 0;
+
+		}
+
+		&_right {
+			right: 0;
+		}
+	}
 
 	&__slider-menu {
 		display: flex;
 		justify-content: space-between;
 		max-height: 158px;
 		background: #fff;
+		transform: none !important;
 		@extend %overflow-hidden; 
+
+		.slick-track {
+			transform: none !important;
+		}
 	}
 
 	&__item {
@@ -152,7 +189,7 @@ header-slider
 			opacity: 0.7;
 		}
 
-		&_active {
+		&.slick-current {
 			opacity: 1;
 
 			&:hover {
@@ -164,7 +201,11 @@ header-slider
 
 .mytona-slide {
 	position: relative;
-	max-height: 792px;
+	max-height: 780px;
+	-webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 	@extend %overflow-hidden;
 
 	&:hover {

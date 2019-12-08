@@ -1,4 +1,4 @@
-.btn-link, .menu__nav-link, .header-slider__item, .tabs-menu__link, .footer__link, .menu-social__nav-link {
+.btn-link, .menu__nav-link, .header-slider .slide-btn, .header-slider__item, .tabs-menu__link, .footer__link, .menu-social__nav-link {
   transition: box-shadow .2s, transform .2s, border .2s, background .2s, opacity .2s, color .2s ease-in-out; }
 
 .item-category {
@@ -174,24 +174,52 @@ index.html
 /*
 header-slider
 ======================*/
-.header-slider__slider-menu {
-  display: flex;
-  justify-content: space-between;
-  max-height: 158px;
-  background: #fff; }
-.header-slider__item {
-  cursor: pointer;
-  opacity: 0.5; }
-  .header-slider__item:hover {
-    opacity: 0.7; }
-  .header-slider__item_active {
-    opacity: 1; }
-    .header-slider__item_active:hover {
+.header-slider {
+  position: relative; }
+  .header-slider .slide-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 13%;
+    height: 100%;
+    font-size: 30px;
+    color: #FBFBFB;
+    text-shadow: 0 4px 6px #212529;
+    opacity: .5;
+    z-index: 99; }
+    .header-slider .slide-btn:hover {
       opacity: 1; }
+    .header-slider .slide-btn_left {
+      left: 0; }
+    .header-slider .slide-btn_right {
+      right: 0; }
+  .header-slider__slider-menu {
+    display: flex;
+    justify-content: space-between;
+    max-height: 158px;
+    background: #fff;
+    transform: none !important; }
+    .header-slider__slider-menu .slick-track {
+      transform: none !important; }
+  .header-slider__item {
+    cursor: pointer;
+    opacity: 0.5; }
+    .header-slider__item:hover {
+      opacity: 0.7; }
+    .header-slider__item.slick-current {
+      opacity: 1; }
+      .header-slider__item.slick-current:hover {
+        opacity: 1; }
 
 .mytona-slide {
   position: relative;
-  max-height: 792px; }
+  max-height: 780px;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text; }
   .mytona-slide:hover .mytona-slide__link-brand {
     transform: scale(0.85) translateY(-230px); }
   .mytona-slide:hover .mytona-slide__content {
