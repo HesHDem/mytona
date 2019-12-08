@@ -30,14 +30,6 @@ $(function () {
         prevArrow: '<i class="fas slide-btn slide-btn_left fa-angle-left"></i>',
         nextArrow: '<i class="fas slide-btn slide-btn_right fa-angle-right"></i>',
         asNavFor: '.header-slider__slider-menu',
-		// fade: true,
-		// dots: true,
-		// dotsClass: 'slider-dots',
-		// pauseOnDotsHover: true,
-		// customPaging : function(slider, i) {
-		// var thumb = $(slider.$slides[i]).data();
-		// return '<button>'+0+(i+1)+'</button>';
-		// },
 		responsive: [
 			{
                 breakpoint: 992,
@@ -54,20 +46,23 @@ $(function () {
         ]
 	});
 
-	$('.header-slider__slider-menu').slick({ // настройка навигации
-        slidesToShow: 5, // указываем что нужно показывать 3 навигационных изображения
-        asNavFor: '.header-slider__slider', // указываем что это навигация для блока выше
+	$('.header-slider__slider-menu').slick({
+        slidesToShow: 5,
+        asNavFor: '.header-slider__slider',
         centerMode: false,
         accessibility: 'boolean',
-        focusOnSelect: true // указываем что бы слайделось по клику
+        focusOnSelect: true
     });
 
-	// $('.question-block').click(function () {
-	// 	$('.question-block').removeClass('active');
-	// 	$(this).addClass('active');
-	// });
+	$(".category-news").not(":first").hide();
+	$(".tab-news").click(function() {
+	    $(".tab-news").removeClass("active").eq($(this).index()).addClass("active");
+	    $(".category-news").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
 
-	// $('.btn-mobile-menu').click(function () {
-	// 	$('.mobile-menu-block').toggleClass('active');
-	// });
+	$(".category-vacancy").not(":first").hide();
+	$(".tab-vacancy").click(function() {
+	    $(".tab-vacancy").removeClass("active").eq($(this).index()).addClass("active");
+	    $(".category-vacancy").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
 });

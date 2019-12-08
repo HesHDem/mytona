@@ -358,30 +358,42 @@ mytona-category
 
 .tabs-menu {
 	display: flex;
-	padding-bottom: 10px;
+	padding-bottom: 1px;
 	border-bottom: 1px solid $gray-light-2;
 
 	&__tab {
-		margin-right: 20px;
-
-		&_active {
-
-			a {
-				color: $blue;
-				border-bottom: 2px solid $blue;
-			}
-		}
-	}
-
-	&__link {
+		position: relative;
 		font-size: 20px;
 		font-weight: 600;
 		color: $gray;
 		padding-bottom: 10px;
+		margin-right: 20px;
+		cursor: pointer;
 		@extend %transition-2s;
+
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			border-bottom: solid 2px $blue;
+			transform: scaleX(0);
+			@extend %transition-2s;
+		}
 
 		&:hover {
 			color: $blue;
+		}
+
+		&.active {
+			color: $blue;
+			cursor: default;
+
+			&::after {
+				transform: scaleX(1);
+			}
 		}
 	}
 }
