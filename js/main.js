@@ -1,5 +1,11 @@
 $(function () {
 
+	$('.header__mobile-btn').click(function() {
+		$('.header__icon').toggleClass('active');
+		$('.header__nav').slideToggle(200);
+		$('.header__nav').css('display', 'flex');
+	});
+
 	$('.header-slider__slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -11,21 +17,7 @@ $(function () {
         accessibility: 'boolean',
         prevArrow: '<i class="fas slide-btn slide-btn_left fa-angle-left"></i>',
         nextArrow: '<i class="fas slide-btn slide-btn_right fa-angle-right"></i>',
-        asNavFor: '.header-slider__slider-menu',
-		responsive: [
-			{
-                breakpoint: 992,
-                settings: {
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                	dots: false,
-                	swipe: true
-                }
-            }
-        ]
+        asNavFor: '.header-slider__slider-menu'
 	});
 
 	$('.header-slider__slider-menu').slick({

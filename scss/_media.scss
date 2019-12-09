@@ -1,0 +1,123 @@
+@media (max-width: 575.98px) {
+	h2.title, .mytona-category h1.title {
+		font-size: 34px;
+	}
+
+	.mytona-slide {
+		max-height: 800px;
+	}
+
+	.tabs-menu {
+		flex-direction: column;
+    	align-items: flex-start;
+    	padding-bottom: 10px;
+    	margin-bottom: 10px;
+
+		&__tab {
+			padding: 0;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+	.footer {
+
+		&__logo {
+			width: 240px;
+		}
+
+		&__nav {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin-bottom: 40px;
+		}
+
+		&__menu-social {
+			margin-top: 30px;
+		}
+
+		&__links-title {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 30px;
+			color: $black;
+			margin-bottom: 5px;
+		}
+
+		&__links-list {
+			font-size: 16px;
+			line-height: 30px;
+		}
+
+		&__link {
+			
+			&_gray {
+				color: $gray-light;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 1199.98px) {
+	
+	.header {
+
+		&__nav {
+			display: none;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			background: $white;
+			padding: 20px 55px 40px;
+			z-index: 99;
+			overflow: hidden;
+		}
+
+		&__menu {
+			flex-direction: column;
+			
+			li {
+				margin: 0;
+				margin-bottom: 15px;
+			}
+
+			a {
+				font-size: 28px;
+				font-weight: 600;
+			}
+		}
+
+		&__menu-social {
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+
+		&__logo {
+			width: 150px;
+			order: 1;
+			margin: 0 auto;
+		}
+	}
+
+	.mytona-slide {
+
+		&:hover {
+			
+			.mytona-slide {
+				
+				&__link-brand {
+					transform: none;
+				}
+			}
+		}
+	}
+}

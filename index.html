@@ -18,19 +18,30 @@
 	<div class="preloader">
 	  	<div class="preloader__container">
 		    <svg class="preloader__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
-		         <circle cx="170" cy="170" r="135" stroke="#037EBC"/>
-		         <circle cx="170" cy="170" r="110" stroke="#3AAFE9"/>
-		         <circle cx="170" cy="170" r="85" stroke="#037EBC"/>
-		         <circle cx="170" cy="170" r="60" stroke="#3AAFE9"/>
+		        <circle cx="170" cy="170" r="135" stroke="#037EBC"/>
+		        <circle cx="170" cy="170" r="110" stroke="#3AAFE9"/>
+		        <circle cx="170" cy="170" r="85" stroke="#037EBC"/>
+		        <circle cx="170" cy="170" r="60" stroke="#3AAFE9"/>
+		        <text class="preloader__text" x="110" y="360">Loading...</text>
 		    </svg>
-		    <div class="preloader__text">Loading...</div>
 		</div>
 	</div>
 	<header class="header">
 		<div class="container-fluid">
+			<div class="header__mobile-nav nav d-xl-none">
+				<a href="index.html" class="header__logo-mobile logo-mobile d-xl-none">
+					<img src="images/logo/logoleaf.svg" alt="">
+					<span>MYTONA</span>
+				</a>
+				<button class="header__mobile-btn">
+					<i class="header__icon fas fa-bars active"></i>
+					<i class="header__icon fas fa-times"></i>
+				</button>
+			</div>
 			<nav class="header__nav nav">
-				<a href="index.html" class="logo"><img src="images/logo/logo.svg" alt=""></a>
-				<ul class="menu">
+				<div class="bg-pattern bg-pattern_gray d-xl-none"></div>
+				<a href="index.html" class="header__logo logo"><img src="images/logo/logo.svg" alt=""></a>				
+				<ul class="header__menu menu">
 					<li class="menu__nav-item menu__nav-item_active"><a class="menu__nav-link" href="#">Главная</a></li>
 					<li class="menu__nav-item"><a class="menu__nav-link" href="#">О Компании</a></li>
 					<li class="menu__nav-item"><a class="menu__nav-link" href="#">Карьера</a></li>
@@ -38,9 +49,16 @@
 					<li class="menu__nav-item"><a class="menu__nav-link" href="#">Новости</a></li>
 					<li class="menu__nav-item"><a class="menu__nav-link" href="#">Техподдержка</a></li>
 				</ul>
-				<ul class="menu">
+				<ul class="header__menu menu">
 					<li class="menu__lang-item"><a class="menu__nav-link" href="#">ENG</a></li>
 				</ul>
+				<ul class="header__menu-social menu-social d-xl-none">
+				 	<li class="menu-social__nav-item menu-social__nav-item_active"><a class="menu-social__nav-link" target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
+				 	<li class="menu-social__nav-item"><a class="menu-social__nav-link" target="_blank" href="#"><i class="fab fa-facebook-f"></i></a></li>
+				 	<li class="menu-social__nav-item"><a class="menu-social__nav-link" target="_blank" href="#"><i class="fab fa-youtube"></i></a></li>
+				 	<li class="menu-social__nav-item"><a class="menu-social__nav-link" target="_blank" href="#"><i class="fab fa-twitter"></i></a></li>
+				 	<li class="menu-social__nav-item"><a class="menu-social__nav-link" target="_blank" href="#"><i class="fab fa-vk"></i></a></li>
+				 </ul> 
 			</nav>
 		</div>
 	</header>
@@ -48,9 +66,10 @@
 		<div class="header-slider">
 			<div class="header-slider__slider">
 				<div class="mytona-slide">
-					<a href="#" class="mytona-slide__link-img"><img src="images/header-slider/slide-01.jpg" alt=""></a>
-					<a href="#" class="mytona-slide__link-brand"><img src="images/header-slider/brand-01.png" alt=""></a>
-					<div class="mytona-slide__content">
+					<a href="#" class="mytona-slide__link-img d-none d-sm-block"><img src="images/header-slider/slide-01.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-img_mobile d-sm-none"><img src="images/header-slider/slide-01-m.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-brand d-none d-sm-flex"><img src="images/header-slider/brand-01.png" alt=""></a>
+					<div class="mytona-slide__content d-none d-xl-block">
 						<div class="container-fluid">
 							<div class="mytona-slide__download-buttons">
 								<a href="#" class="mytona-slide__btn"><img src="images/header-slider/apple-btn.svg" alt=""></a>
@@ -75,9 +94,10 @@
 					</div>
 				</div>
 				<div class="mytona-slide">
-					<a href="#" class="mytona-slide__link-img"><img src="images/header-slider/slide-02.jpg" alt=""></a>
-					<a href="#" class="mytona-slide__link-brand"><img src="images/header-slider/brand-02.png" alt=""></a>
-					<div class="mytona-slide__content">
+					<a href="#" class="mytona-slide__link-img d-none d-sm-block"><img src="images/header-slider/slide-02.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-img_mobile d-sm-none"><img src="images/header-slider/slide-02-m.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-brand d-none d-sm-flex"><img src="images/header-slider/brand-02.png" alt=""></a>
+					<div class="mytona-slide__content d-none d-xl-block">
 						<div class="container-fluid">
 							<div class="mytona-slide__download-buttons">
 								<a href="#" class="mytona-slide__btn"><img src="images/header-slider/apple-btn.svg" alt=""></a>
@@ -102,9 +122,10 @@
 					</div>
 				</div>
 				<div class="mytona-slide">
-					<a href="#" class="mytona-slide__link-img"><img src="images/header-slider/slide-03.jpg" alt=""></a>
-					<a href="#" class="mytona-slide__link-brand"><img src="images/header-slider/brand-03.png" alt=""></a>
-					<div class="mytona-slide__content">
+					<a href="#" class="mytona-slide__link-img d-none d-sm-block"><img src="images/header-slider/slide-03.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-img_mobile d-sm-none"><img src="images/header-slider/slide-03-m.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-brand d-none d-sm-flex"><img src="images/header-slider/brand-03.png" alt=""></a>
+					<div class="mytona-slide__content d-none d-xl-block">
 						<div class="container-fluid">
 							<div class="mytona-slide__download-buttons">
 								<a href="#" class="mytona-slide__btn"><img src="images/header-slider/apple-btn.svg" alt=""></a>
@@ -129,9 +150,10 @@
 					</div>
 				</div>
 				<div class="mytona-slide">
-					<a href="#" class="mytona-slide__link-img"><img src="images/header-slider/slide-01.jpg" alt=""></a>
-					<a href="#" class="mytona-slide__link-brand"><img src="images/header-slider/brand-01.png" alt=""></a>
-					<div class="mytona-slide__content">
+					<a href="#" class="mytona-slide__link-img d-none d-sm-block"><img src="images/header-slider/slide-01.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-img_mobile d-sm-none"><img src="images/header-slider/slide-01-m.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-brand d-none d-sm-flex"><img src="images/header-slider/brand-01.png" alt=""></a>
+					<div class="mytona-slide__content d-none d-xl-block">
 						<div class="container-fluid">
 							<div class="mytona-slide__download-buttons">
 								<a href="#" class="mytona-slide__btn"><img src="images/header-slider/apple-btn.svg" alt=""></a>
@@ -156,9 +178,10 @@
 					</div>
 				</div>
 				<div class="mytona-slide">
-					<a href="#" class="mytona-slide__link-img"><img src="images/header-slider/slide-02.jpg" alt=""></a>
-					<a href="#" class="mytona-slide__link-brand"><img src="images/header-slider/brand-02.png" alt=""></a>
-					<div class="mytona-slide__content">
+					<a href="#" class="mytona-slide__link-img d-none d-sm-block"><img src="images/header-slider/slide-02.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-img_mobile d-sm-none"><img src="images/header-slider/slide-02-m.jpg" alt=""></a>
+					<a href="#" class="mytona-slide__link-brand d-none d-sm-flex"><img src="images/header-slider/brand-02.png" alt=""></a>
+					<div class="mytona-slide__content d-none d-xl-block">
 						<div class="container-fluid">
 							<div class="mytona-slide__download-buttons">
 								<a href="#" class="mytona-slide__btn"><img src="images/header-slider/apple-btn.svg" alt=""></a>
@@ -183,16 +206,18 @@
 					</div>
 				</div>
 			</div>
-			<ul class="header-slider__slider-menu">
+			<ul class="header-slider__slider-menu d-none d-sm-block">
 				<li class="header-slider__item"><img src="images/header-slider/slide-01.jpg" alt=""></li>
 				<li class="header-slider__item"><img src="images/header-slider/slide-02.jpg" alt=""></li>
 				<li class="header-slider__item"><img src="images/header-slider/slide-03.jpg" alt=""></li>
 				<li class="header-slider__item"><img src="images/header-slider/slide-01.jpg" alt=""></li>
 				<li class="header-slider__item"><img src="images/header-slider/slide-02.jpg" alt=""></li>
 			</ul>
+			<div class="header-slider__btn-play d-xl-none">Играть сейчас</div>
 		</div>				
 		<section class="mytona-category">
 			<div class="mytona-category__container container">
+				<div class="bg-pattern bg-pattern_gray"></div>
 				<div class="mytona-category__header">
 					<h1 class="mytona-category__title title">Последние новости</h1>
 					<ul class="mytona-category__tabs-menu tabs-menu">
@@ -202,56 +227,56 @@
 					</ul>
 				</div>
 				<div class="mytona-category__content category-news row">
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/01.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet</div>
 						<div class="item-category__data">12 дек. 2020</div>
 					</a>
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/02.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum Lorem ipsum. ipsum dolor sit amet. ipsum dolor sit amet. ditatis.</div>
 						<div class="item-category__data">12. 12. 2020</div>
 					</a>
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/01.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur itaque delectus autem, deleniti, possimus ex illo repellat consectetur corrupti quas quo debitis ducimus harum tenetur, a temporibus voluptatem et aliquid.</div>
 						<div class="item-category__data">12 дек. 2020</div>
 					</a>
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/03.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing</div>
 						<div class="item-category__data">20 нояб. 2020</div>
 					</a>
 				</div>
 				<div class="mytona-category__content category-news row">
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/02.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum Lorem ipsum. ipsum dolor sit amet. ipsum dolor sit amet. ditatis.</div>
 						<div class="item-category__data">12. 12. 2020</div>
 					</a>
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/01.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet</div>
 						<div class="item-category__data">12 дек. 2020</div>
 					</a>
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/03.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing</div>
 						<div class="item-category__data">20 нояб. 2020</div>
 					</a>
 				</div>
 				<div class="mytona-category__content category-news row">
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/01.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet</div>
 						<div class="item-category__data">12 дек. 2020</div>
 					</a>
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/03.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing</div>
 						<div class="item-category__data">20 нояб. 2020</div>
 					</a>
-					<a href="#" class="item-category col-3">
+					<a href="#" class="item-category col-12 col-sm-6 col-lg-3">
 						<div class="item-category__img"><img src="images/mytona-category/01.jpg" alt=""></div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur itaque delectus autem, deleniti, possimus ex illo repellat consectetur corrupti quas quo debitis ducimus harum tenetur, a temporibus voluptatem et aliquid.</div>
 						<div class="item-category__data">12 дек. 2020</div>
@@ -262,6 +287,7 @@
 		</section>
 		<section class="mytona-category mytona-category_bg-gray">
 			<div class="mytona-category__container container">
+				<div class="bg-pattern"></div>
 				<div class="mytona-category__header">
 					<h2 class="mytona-category__title title">Все вакансии</h2>
 					<ul class="mytona-category__tabs-menu tabs-menu">
@@ -270,74 +296,74 @@
 					</ul>
 				</div>
 				<div class="mytona-category__content category-vacancy row">
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">Программист Unity (Middle / Senior)</div>
 						<div class="item-category__tag">Programming</div>
 						<div class="item-category__text">Разработка ПО для мобильных устройств и их поддержка.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">2D-художник</div>
 						<div class="item-category__tag">Art & Design</div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate nobis illum numquam! Dolorem totam perspiciatis suscipit nesciunt quidem, eligendi ea laborum quod repellendus natus sint aspernatur aliquid, consequuntur veritatis.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">Программист С++ (Junior, Middle, Senior)</div>
 						<div class="item-category__tag">Programming</div>
 						<div class="item-category__text">Разработка и поддержка ПО для мобильных устройств!</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">2D-художник</div>
 						<div class="item-category__tag">Art & Design</div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate nobis illum numquam! Dolorem totam perspiciatis suscipit nesciunt quidem, eligendi ea laborum quod repellendus natus sint aspernatur aliquid, consequuntur veritatis.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">Программист С++ (Junior, Middle, Senior)</div>
 						<div class="item-category__tag">Programming</div>
 						<div class="item-category__text">Разработка и поддержка ПО для мобильных устройств!</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">Программист Unity (Middle / Senior)</div>
 						<div class="item-category__tag">Programming</div>
 						<div class="item-category__text">Разработка ПО для мобильных устройств и их поддержка.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">2D-художник</div>
 						<div class="item-category__tag">Art & Design</div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate nobis illum numquam! Dolorem totam perspiciatis suscipit nesciunt quidem, eligendi ea laborum quod repellendus natus sint aspernatur aliquid, consequuntur veritatis.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">2D-художник</div>
 						<div class="item-category__tag">Art & Design</div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate nobis illum numquam! Dolorem totam perspiciatis suscipit nesciunt quidem, eligendi ea laborum quod repellendus natus sint aspernatur aliquid, consequuntur veritatis.</div>
 					</a>
 				</div>
 				<div class="mytona-category__content category-vacancy row">
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">lorem</div>
 						<div class="item-category__tag">Programming</div>
 						<div class="item-category__text">Разработка ПО для мобильных устройств и их поддержка.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">2D-художник</div>
 						<div class="item-category__tag">Art & Design</div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate nobis illum numquam! Dolorem totam perspiciatis suscipit nesciunt quidem, eligendi ea laborum quod repellendus natus sint aspernatur aliquid, consequuntur veritatis.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">Lorem ipsum dolor sit amet.</div>
 						<div class="item-category__tag">Art & Design</div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate nobis illum numquam! Dolorem totam perspiciatis suscipit nesciunt quidem, eligendi ea laborum quod repellendus natus sint aspernatur aliquid, consequuntur veritatis.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus non hic sint.</div>
 						<div class="item-category__tag">Art & Design</div>
 						<div class="item-category__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cupiditate nobis illum numquam! Dolorem totam perspiciatis suscipit nesciunt quidem, eligendi ea laborum quod repellendus natus sint aspernatur aliquid, consequuntur veritatis.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">Программист Unity (Middle / Senior)</div>
 						<div class="item-category__tag">Programming</div>
 						<div class="item-category__text">Разработка ПО для мобильных устройств и их поддержка.</div>
 					</a>
-					<a href="#" class="item-category item-category_min col-3">
+					<a href="#" class="item-category item-category_min col-12 col-sm-6 col-lg-3">
 						<div class="item-category__title">Программист С++ (Junior, Middle, Senior)</div>
 						<div class="item-category__tag">Programming</div>
 						<div class="item-category__text">Разработка и поддержка ПО для мобильных устройств!</div>
@@ -351,7 +377,7 @@
 		<div class="container">
 			<div class="footer__nav nav">
 				<a href="index.html" class="footer__logo logo"><img src="images/logo/logo.svg" alt=""></a>
-				<ul class="menu-social">
+				<ul class="footer__menu-social menu-social">
 				 	<li class="menu-social__nav-item menu-social__nav-item_active"><a class="menu-social__nav-link" target="_blank" href="#"><i class="fab fa-instagram"></i></a></li>
 				 	<li class="menu-social__nav-item"><a class="menu-social__nav-link" target="_blank" href="#"><i class="fab fa-facebook-f"></i></a></li>
 				 	<li class="menu-social__nav-item"><a class="menu-social__nav-link" target="_blank" href="#"><i class="fab fa-youtube"></i></a></li>
@@ -360,21 +386,21 @@
 				 </ul> 
 			</div>
 			<div class="footer__menu-links row">
-				<div class="footer__links col-3">
+				<div class="footer__links col-12 col-sm-4 col-md-3">
 					<div class="footer__links-title">Сайты игр</div>
 					<ul class="footer__links-list">
-						<li><a class="footer__link" href="#">Seekers Notes: Hidden Mystery</a></li>
-						<li><a class="footer__link" href="#">Cooking Diary: Tasty Hills</a></li>
+						<li><a class="footer__link footer__link_gray" href="#">Seekers Notes: Hidden Mystery</a></li>
+						<li><a class="footer__link footer__link_gray" href="#">Cooking Diary: Tasty Hills</a></li>
 					</ul>
 				</div>
-				<div class="footer__links offset-3 col-3">
+				<div class="footer__links col-12 col-sm-4 offset-md-3 col-md-3">
 					<div class="footer__links-title">Контакты</div>
 					<ul class="footer__links-list">
-						<li><a class="footer__link" href="#">info@mytona.com</a></li>
-						<li><a class="footer__link" href="#">support@mytona.com</a></li>
+						<li><a class="footer__link footer__link_gray" href="#">info@mytona.com</a></li>
+						<li><a class="footer__link footer__link_gray" href="#">support@mytona.com</a></li>
 					</ul>
 				</div>
-				<div class="footer__links col-3">
+				<div class="footer__links col-12 col-sm-4 col-md-3">
 					<ul class="footer__links-list">
 						<li><a class="footer__link" href="#">Политика конфиденциальности</a></li>
 						<li><a class="footer__link" href="#">Условия использования</a></li>
