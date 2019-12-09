@@ -26,11 +26,12 @@ $main-font: 'Pragmatica';
 /*===========*/
 
 @import 'reset';
+@import 'preloader';
 
 body {
 	font: 400 16px $main-font, 'Open Sans', sans-serif;
 	color: $black;
-	background: #fff;
+	background: $white;
 }
 
 h2.title {
@@ -407,7 +408,7 @@ mytona-category
 	@extend %transition-3s;
 
 	&_min {
-		max-height: 172px;
+		height: 172px;
 	}
 	
 	&:hover {

@@ -1,27 +1,9 @@
-// function initMap() {
-//     var coordinates = {lat: 59.913089, lng: 30.331965},
-    
-//     map = new google.maps.Map(document.getElementById("#map"), {
-//         center: coordinates,
-//         zoom: 16,
-//         disableDefaultUI: boolean,
-//         scrollwheel: boolean
-//     });
-
-//     image = "images/marker-map.svg",
-//     marker = new google.maps.Marker({
-//         position: coordinates,
-//         map: map,
-//         icon: image
-//     });
-// }
-
 $(function () {
 
 	$('.header-slider__slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		speed: 900,
+		speed: 700,
 		autoplay: true,
 		autoplaySpeed: 5000,
 		infinite: true,
@@ -65,4 +47,10 @@ $(function () {
 	    $(".tab-vacancy").removeClass("active").eq($(this).index()).addClass("active");
 	    $(".category-vacancy").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
+
+	window.onload = function () {
+		$('.preloader').fadeOut(200, function() { 
+			$('.preloader').remove(); 
+		});
+	}
 });
