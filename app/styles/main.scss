@@ -10,6 +10,7 @@ $white-2: #F0F0F0;
 
 /* variables text */
 $main-font: 'Pragmatica';
+$fa-font-path: "../fonts/webfonts" !default;
 
 /* variables properties */
 %transition-1s { transition: box-shadow .1s, transform .1s, border .1s, background .1s, opacity .1s, color .1s ease-in-out; }
